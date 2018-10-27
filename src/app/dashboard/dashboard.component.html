@@ -1,9 +1,25 @@
-<h3>Top Heroes</h3>
-<div class="grid grid-pad">
-  <a *ngFor="let hero of heroes" class="col-1-4" routerLink="/detail/{{hero.id}}">
-    <div class="module hero">
-      <h4>{{hero.name}}</h4>
+<div class="wrapper">
+  <div id="head" class="header">
+    <h1>
+      Icarus Dashboard
+    </h1>
+  </div>
+  <div class="nav-box-container">
+    <a routerLink="/exercises" class="nav-box">
+      <span name="exercises">Exercises</span>
+    </a>
+    <a routerLink="/plans" class="nav-box">
+      <span name="plans">Workout Plans</span>
+    </a>
+  </div>
+  <div class="grid grid-pad">
+    <div class="nav-box-container">
+      <h2 class="header">Last Workout</h2>
     </div>
-  </a>
+    <a *ngFor="let hero of heroes" class="nav-box-container" routerLink="/detail/{{hero.id}}">
+      <div class="nav-box">
+        <h4>{{hero.name}}</h4>
+      </div>
+    </a>
+  </div>
 </div>
-

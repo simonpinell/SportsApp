@@ -1,0 +1,42 @@
+div {
+    text-align: center;
+}
+
+.loginTitle{
+    text-align: left;
+    font-size: 2em;
+    color: beige;
+    padding: 2em;
+}
+
+.loginHeadline {
+    margin: 3em 0;
+    font-size: 1.7em;
+    color: beige;
+}
+
+.loginButton {
+    padding: 1em;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 2em;
+    background-color:grey;
+    color: beige;
+    text-align: center;    
+
+    span {
+        font-size: 1em;
+        color: beige;   
+        font-weight: bold;
+    }
+}
+
+.loginButton:hover {
+    background-color: beige;
+    color: #333;
+    cursor: pointer;
+
+    span {
+        color: #333;
+    }
+}

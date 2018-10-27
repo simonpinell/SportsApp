@@ -1,0 +1,27 @@
+nav {
+  font-family: "Montserrat", "Helvetica", sans-serif;
+
+  ul {
+    bottom: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+  }
+
+  li {
+    padding: 10px 12px;
+
+  }
+
+  a {
+    text-decoration: none;
+    color:white;
+  }
+
+  i {
+    font-style: normal;
+    font-size: 36px;
+  }
+}

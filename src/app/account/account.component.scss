@@ -1,0 +1,88 @@
+#se-acc-section input:disabled {
+    background-color: #fff;
+    font-size: 1em;
+    border: none;
+}
+
+#se-acc-section input:enabled {
+    background-color: #fff;
+    font-size: 1em;
+    border: 1px solid grey;
+    cursor: text; 
+    width: 100%; 
+}
+
+#se-acc-section i {
+    cursor: pointer;
+}
+
+
+.se-section {
+    margin: 40px 0; 
+}
+
+.forms {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    justify-content: space-between;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    justify-content: space-between;
+    border-bottom: 0.03em solid lightgrey;
+    padding: 5px 0;
+}
+
+input[type=checkbox]{
+    display: none;
+    height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	width: 2.6em;
+	height: 1.4em;
+	background: #808080;
+	display: block;
+	border-radius: 1em;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top:  0.2em;
+	left: 0.2em;
+	width: 1em;
+	height: 1em;
+	background: #fff;
+	border-radius: 1em;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background:cornflowerblue;
+} 
+
+input:checked + label:after {
+	left: calc(100% - 0.2em);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 1em;
+}
+
+// centering
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}

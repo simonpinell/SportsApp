@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { importExpr } from '@angular/compiler/src/output/output_ast';
 
+import { LoginComponent } from './login/login.component'; 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroesComponent } from './heroes/heroes.component'; 
-import { HeroDetailComponent } from './hero-detail/hero-detail.component'; 
 
+import { ExercisesComponent } from './exercises/exercises.component'; 
+import { ExerciseDetailComponent } from './exercise-detail/exercise-detail.component';
+import { PlansComponent } from './plans/plans.component'; 
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', component: DashboardComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'heroes', component: HeroesComponent },
-  { path: 'detail/:id', component: HeroDetailComponent },
+  { path: 'exercises', component: ExercisesComponent },
+  { path: 'detail/:id', component: ExerciseDetailComponent },
+  { path: 'plans', component: PlansComponent },
+  { path: 'account', component: AccountComponent }
 ];
 
 @NgModule({

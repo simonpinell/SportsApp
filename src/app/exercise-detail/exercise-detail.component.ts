@@ -6,11 +6,11 @@ import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
 @Component({
-  selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.scss']
+  selector: 'app-exercise-detail',
+  templateUrl: './exercise-detail.component.html',
+  styleUrls: ['./exercise-detail.component.scss']
 })
-export class HeroDetailComponent implements OnInit {
+export class ExerciseDetailComponent implements OnInit {
 
   hero: Hero;
 

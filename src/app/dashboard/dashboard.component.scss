@@ -60,3 +60,31 @@ h4 {
     min-width: 60px;
   }
 }
+
+
+
+
+/*Icarus CSS*/
+
+.nav-box-container {
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+}
+
+.nav-box {
+    display: inline-block;
+    width: 5em;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 30px;
+    border-radius: 0.5em;
+    text-align: center;
+    border: 1px solid #eee;
+    flex: auto;
+
+}
+
+.nav-box:hover {
+    background-color: #fcfcfc;
+}

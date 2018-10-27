@@ -5,19 +5,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
+import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
+import { ExercisesComponent } from './exercises/exercises.component';
+import { ExerciseDetailComponent } from './exercise-detail/exercise-detail.component';
+import { AccountComponent } from './account/account.component';
+import { PlansComponent } from './plans/plans.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
+    ExercisesComponent,
     MessagesComponent,
-    DashboardComponent
+    LoginComponent,
+    DashboardComponent,
+    NavbarComponent,
+    ExerciseDetailComponent,
+    AccountComponent,
+    PlansComponent
   ],
   imports: [
     BrowserModule,
