@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Exercise } from '../exercise';
+import { ExerciseService } from '../exercise.service';
 
 @Component({
   selector: 'app-exercise-detail',
@@ -12,21 +12,21 @@ import { HeroService } from '../hero.service';
 })
 export class ExerciseDetailComponent implements OnInit {
 
-  hero: Hero;
+  exercise: Exercise;
 
   constructor(
     private route: ActivatedRoute, 
-    private heroService: HeroService,
+    private exerciseService: ExerciseService,
     private location: Location
     ) { }
 
   ngOnInit() {
-    this.getHero();
+    this.getexercise();
   }
 
-  getHero(): void {
+  getexercise(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.heroService.getHero(id).subscribe(hero => this.hero = hero);
+    this.exerciseService.getexercise(id).subscribe(exercise => this.exercise = exercise);
   }
 
   goBack(): void {

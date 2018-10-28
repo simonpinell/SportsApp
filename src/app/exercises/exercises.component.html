@@ -1,15 +1,19 @@
 <div class="wrapper">
-  <div id="exercises-head" class="header">
+  <div class="header">
     <h1>My Exercises</h1>
   </div>
-  <div id="exercises-content" class="content">
-    <ul class="heroes wrapper">
-      <li *ngFor="let hero of heroes" class="card-head">
-        <a routerLink="/detail/{{hero.id}}" class="card">
-        <span class="badge">{{ hero.id }}</span> {{ hero.name }}
-        </a>
-      </li>
-    </ul>
+  <div class="content">
+    <a *ngFor="let exercise of exercises" routerLink="/detail/{{exercise.id}}" class="nav-box-container">
+      <div class="exercise-box">
+        <div class="box-head">
+          <span style="text-align: left">{{ exercise.name }}</span> 
+          <span class="lgrey">{{ exercise.id }}</span>
+        </div>  
+        <div class="box-detail" *ngIf="exercise.freeExercise==false">
+          <span>Training: {{ exercise.weight }}</span>
+        </div>
+      </div>
+    </a>
   </div>
 </div>
-<app-messages *ngIf="appRouter.url !== '/login'" id="navigation"></app-messages>
+<!-- <app-messages *ngIf="appRouter.url !== '/login'" id="navigation"></app-messages> -->

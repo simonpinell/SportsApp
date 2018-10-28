@@ -1,76 +1,77 @@
-<div id="se-container">
-  <div id="se-wrapper" class="header">
-    <div id="se-head">
-      <h1>My Account</h1>
+<div class="wrapper">
+  <div class="header">
+    <h1>My Account</h1>
+  </div>
+  <div class="content">
+    <div class="se-section">
+      <h2>My Account</h2>
+      <p>
+        Change your account settings.
+      </p>
+      <ul id="se-acc-section">
+        <li>
+          <form class="forms" id="myform1">
+            <input id="input-user-name" value="{{ user.name }}" placeholder="Name" [disabled]="disabledInputName" />
+            <div>
+              <i class="material-icons" (click)="editName()">edit</i>
+            </div>
+          </form>
+        </li>
+        <li>
+          <form class="forms" name="myform2">
+            <input id="input-user-mail" name="mytext2" value="{{ user.mail }}" placeholder="Email address" [disabled]='disabledInputMail' />
+            <div>
+              <i class="material-icons" (click)="editMail()">edit</i>
+            </div>
+          </form>
+        </li>
+      </ul>
     </div>
-    <div id="se-content">
-      <div id="se-account" class="se-section">
-        <h2>My Account</h2>
-        <p>
-          Change your account settings.
-        </p>
-        <ul id="se-acc-section">
-          <li>
-            <form class="forms" id="myform1">
-              <input id="input-user-name" value="{{ user.name }}" placeholder="Name" [disabled]="disabledInputName" />
-              <div>
-                <i class="material-icons" (click)="editName()">edit</i>
-              </div>
-            </form>
-          </li>
-          <li>
-            <form class="forms" name="myform2">
-              <input id="input-user-mail" name="mytext2" value="{{ user.mail }}" placeholder="Email address" [disabled]='disabledInputMail' />
-              <div>
-                <i class="material-icons" (click)="editMail()">edit</i>
-              </div>
-            </form>
-          </li>
-        </ul>
-      </div>
-      <div id="se-reminders" class="se-section">
-        <h2>My Reminders</h2>
-        <p>
-          Set when you want to be reminded.
-        </p>
-        <ul id="se-re-section">
-          <li>
-            <span>Moving</span>
-            <div>
-              <input type="checkbox" id="switchMove" (click)="toggleNotifyMove()" />
-              <label for="switchMove"></label>
-            </div>
-          </li>
-          <li>
-            <span>Drinking</span>
-            <div>
-              <input type="checkbox" id="switchDrink" (click)="toggleNotifyDrink()" />
-              <label for="switchDrink"></label>
-            </div>
-          </li>
-          <li>
-            <span>Eating</span>
-            <div>
-              <input type="checkbox" id="switchEat" (click)="toggleNotifyEat()" />
-              <label for="switchEat"></label>
-            </div>
-          </li>
-          <li>
-            <span>Motivation</span>
-            <div>
-              <input type="checkbox" id="switchMotivate" (click)="toggleNotifyMotivate()" />
-              <label for="switchMotivate"></label>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div id="se-account" class="se-section">
-        <ul>
-          <li>
-            <a routerLink="/login">Logout</a>
-          </li>
-        </ul>
-      </div>
+    <div class="se-section">
+      <h2>My Reminders</h2>
+      <p>
+        Set when you want to be reminded.
+      </p>
+      <ul id="se-re-section">
+        <li>
+          <span>Moving</span>
+          <div>
+            <input type="checkbox" id="switchMove" (click)="toggleNotifyMove()" />
+            <label for="switchMove"></label>
+          </div>
+        </li>
+        <li>
+          <span>Drinking</span>
+          <div>
+            <input type="checkbox" id="switchDrink" (click)="toggleNotifyDrink()" />
+            <label for="switchDrink"></label>
+          </div>
+        </li>
+        <li>
+          <span>Eating</span>
+          <div>
+            <input type="checkbox" id="switchEat" (click)="toggleNotifyEat()" />
+            <label for="switchEat"></label>
+          </div>
+        </li>
+        <li>
+          <span>Motivation</span>
+          <div>
+            <input type="checkbox" id="switchMotivate" (click)="toggleNotifyMotivate()" />
+            <label for="switchMotivate"></label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="se-account" class="se-section">
+      <ul>
+        <li routerLink="/login" class="se-link">
+          <span> Logout </span>
+          <div>
+            <i class="material-icons" (click)="editMail()">exit_to_app</i>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

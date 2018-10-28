@@ -1,29 +1,39 @@
-/* Application-wide Styles */
-body, input[text], button {
-  color: #888;
-  font-family: Cambria, Georgia;
-}
-
-
-/* Ab hier ist der Icarus Code */
-
-/* You can add global styles to this file, and also import other style files */
 body{
   margin: 0;
   padding: 0;
+  font-size: 1em;
   background: #fff;
+  color: beige;
+  font-family: "Montserrat", "Helvetica", sans-serif;
 }
 
-body, input, a, {
-  color: #333;  
-  font-size: 1em;
-  font-family: "Montserrat", "Helvetica", sans-serif;
+a {
+  color: beige;
 }
 
 input {
   margin: 0;
   padding: 0;
   color: #333;
+  border-radius: 0.3em;
+  font-family: "Montserrat", "Helvetica", sans-serif;
+}
+
+.wrapper{
+  padding: 1.2em;
+  margin-bottom: 8em;
+}
+
+.header{
+  display: flex; 
+  justify-content: space-between;
+  padding: 0;
+  margin: 0.5em 0.5em 2em 0.5em;
+}
+
+.content {
+  padding: 0;
+  margin: 0.5em 0.5em 2em 0.5em;
 }
 
 #container {
@@ -35,20 +45,6 @@ input {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-
-.wrapper{
-  padding: 1.2em;
-  margin: 0;
-}
-
-.header{
-  padding: 0;
-  margin: 0.5em 0.5em 2em 0.5em;
-}
-
-.content {
-  margin-bottom: 8em;
 }
 
 h1{
@@ -80,28 +76,93 @@ span {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 i {
   font-style: normal;
 }
 
-.card {   
-    padding: 1em;
-    margin: 1em 0;
-    border: 1px solid #eee;
-    border-radius: 0.5em;
+.lgrey {
+  color: #ccc;
 }
-    
-.card-head, .card-detail {
+
+.mgrey {
+  color: #333;
+}
+
+.nav-box-container {
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+}
+
+.nav-box {
+    display: inline-block;
+    width: 5em;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+    text-align: center;
+    border: 1px solid #eee;
+    flex: auto;
+}
+
+.nav-box:hover, .exercise-box:hover {
+    background-color: #fcfcfc;
+    color: #333;
+}
+
+/* Exercises */
+.exercise-box {
+    display: inline-block;
+    width: 5em;
+    margin: 0.5em 0 0.5em 0;
+    padding: 1em;
+    border-radius: 0.5em;
+    text-align: center;
+    border: 1px solid #eee;
+    flex: auto;
+}
+
+/* Exercise-Detail*/
+
+.box-beige {
+  border: 1px beige solid;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.box-head, .box-detail {
     display: flex;
     justify-content: space-between;
     flex: auto;
     flex-wrap: wrap;
 }
 
-.card-detail {
-    margin-top: 0.5em;
+.box-detail {
+    margin-top: 0.8em;
+}
+
+.box-detail-head {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(245, 245, 220, 0.50);
+  border-bottom: 0.02em solid rgba(245, 245, 220, 0.50);
+  padding-bottom: 0.5em;
+}
+
+.detail-header{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  color: beige;
+  font-family: "Montserrat", "Helvetica", sans-serif;
+  text-align: center;
 }
 
 // Backgrounds
@@ -110,26 +171,47 @@ i {
     margin: 0;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
 }
 
 .bg1 {
     -webkit-clip-path: polygon(25% 0, 100% 20%, 100% 66%, 69% 100%, 0 100%, 0 0);
-    clip-path: polygon(25% 0, 100% 20%, 100% 66%, 69% 100%, 0 100%, 0 0);    
-    background-color: #3a3a3a;
+    clip-path: polygon(25% 0, 100% 20%, 100% 66%, 69% 100%, 0 100%, 0 0); 
     z-index: -1;
 }
 
 .bg2 {
     -webkit-clip-path: polygon(41% 0, 100% 5%, 100% 82%, 68% 100%, 0 100%, 0 0);
     clip-path: polygon(41% 0, 100% 5%, 100% 82%, 68% 100%, 0 100%, 0 0);
-    background-color: #333;
     z-index: -2;
 }
 
 .bg3 {
-    background-color: #2f2f2f;
     z-index: -3;
+}
+
+.bg-lgrey {
+    background-color: #3a3a3a;
+}
+
+.bg-mgrey {
+    background-color: #333;
+}
+
+.bg-dgrey {
+    background-color: #2f2f2f;
+}
+
+.bg-lgrey-light {
+    background-color: #aaa;
+}
+
+.bg-mgrey-light {
+    background-color: #888;
+}
+
+.bg-dgrey-light {
+    background-color: #2f2f2f;
 }
 
 
@@ -138,7 +220,7 @@ i {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 1.5em;  /* 24px is preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;

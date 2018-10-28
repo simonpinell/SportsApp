@@ -1,10 +1,37 @@
-<div *ngIf="hero">
-  <h2>{{ hero.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{ hero.id }}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name">
-    </label>
+<div class="wrapper">
+  <div class="header">
+    <a (click)="goBack()" class="material-icons">arrow_back_ios</a>
+    <input class="detail-header" [(ngModel)]="exercise.name"/>
+    <span class="material-icons">star</span>
   </div>
-  <button (click)="goBack()">go back</button>
-</div>
+  <div class="content box-beige">
+    <div class="box-detail-head">
+      <span>Weights </span>
+      <span>{{ exercise.id }}</span>
+    </div>
+    <ul *ngIf="exercise.freeExercise==false">
+      <li class="box-detail">
+        <span>Workout weights: </span>
+        <span>{{ exercise.weight }} kg</span>
+      </li>
+      <li class="box-detail">
+        <span>Hatfield: </span>
+        <span>{{ exercise.hatfield }}, {{ exercise.hatfield*0.75 }}, {{ exercise.hatfield*0.5 }}, {{ exercise.hatfield*0.25 }} kg</span>
+      </li>
+      <li class="box-detail">
+        <span>5x5: </span>
+        <span>{{ exercise.fiveXfive }} kg</span>
+      </li>
+    </ul>
+  </div>
+  <div class="content box-beige">
+    <div class="box-detail-head">
+      <span> Recent Activities </span>
+    </div>
+    <ul *ngIf="exercise.freeExercise==false">
+      <li class="box-detail">
+        <span>{{ exercise.weight }}.09.2018</span>
+      </li>
+    </ul>
+  </div>
+</div>  

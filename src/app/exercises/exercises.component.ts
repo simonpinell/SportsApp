@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
-import { HEROES } from '../mock-heroes';
-import { HeroService } from '../hero.service';
+import { Exercise } from '../exercise';
+import { ExerciseService } from '../exercise.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,16 +10,16 @@ import { Router } from '@angular/router';
 })
 export class ExercisesComponent implements OnInit {
 
-  heroes: Hero[];
+  exercises: Exercise[];
   
-  constructor(private heroService: HeroService, public appRouter: Router) { }
+  constructor(private exerciseService: ExerciseService, public appRouter: Router) { }
   
   ngOnInit() {
-    this.getHeroes();
+    this.getexercises();
   }  
 
-  getHeroes(): void {
-    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+  getexercises(): void {
+    this.exerciseService.getexercises().subscribe(exercises => this.exercises = exercises);
 
   }
 }

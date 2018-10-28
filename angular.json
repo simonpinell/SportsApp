@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hero-app": {
+    "exercise-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hero-app",
+            "outputPath": "dist/exercise-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hero-app:build"
+            "browserTarget": "exercise-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "hero-app:build:production"
+              "browserTarget": "exercise-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hero-app:build"
+            "browserTarget": "exercise-app:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "hero-app-e2e": {
+    "exercise-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "hero-app:serve"
+            "devServerTarget": "exercise-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "hero-app:serve:production"
+              "devServerTarget": "exercise-app:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "hero-app"
+  "defaultProject": "exercise-app"
 }
